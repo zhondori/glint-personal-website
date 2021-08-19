@@ -13,25 +13,7 @@
         height: 100px;
         align-items: flex-start;
         button {
-          width: 45px;
-          height: 45px;
-          background: transparent;
-          border: 1px solid $green;
-          color: $green;
-          border-radius: 4px;
-          margin: 0 5px;
-          transition: 0.3s ease all;
-          svg {
-            fill: $green;
-            width: 25px;
-            height: 25px;
-          }
-          &:hover {
-            background: $green;
-            svg {
-              fill: $white;
-            }
-          }
+          @include NavigatorButton;
         }
       }
       .col-lg-5 {

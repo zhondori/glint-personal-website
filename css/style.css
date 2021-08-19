@@ -994,14 +994,12 @@ nav .container .row .col-lg-1 img {
   align-items: flex-start;
 }
 .projects .container .row .col-lg-2 button {
-  width: 45px;
-  height: 45px;
-  background: transparent;
+  width: 50px;
+  height: 50px;
   border: 1px solid #08D565;
-  color: #08D565;
-  border-radius: 4px;
-  margin: 0 5px;
-  transition: 0.3s ease all;
+  border-radius: 5px;
+  background: transparent;
+  transition: 0.2s ease all;
 }
 .projects .container .row .col-lg-2 button svg {
   fill: #08D565;
@@ -1013,6 +1011,9 @@ nav .container .row .col-lg-1 img {
 }
 .projects .container .row .col-lg-2 button:hover svg {
   fill: #FFFFFF;
+}
+.projects .container .row .col-lg-2 button:nth-child(2) {
+  margin-left: 15px;
 }
 .projects .container .row .col-lg-5 {
   position: relative;
@@ -1082,7 +1083,7 @@ nav .container .row .col-lg-1 img {
   justify-content: center;
   align-items: flex-start;
 }
-.testimonals .container .row .col-lg-2 .navigator-button {
+.testimonals .container .row .col-lg-2 button {
   width: 50px;
   height: 50px;
   border: 1px solid #08D565;
@@ -1090,18 +1091,18 @@ nav .container .row .col-lg-1 img {
   background: transparent;
   transition: 0.2s ease all;
 }
-.testimonals .container .row .col-lg-2 .navigator-button svg {
+.testimonals .container .row .col-lg-2 button svg {
   fill: #08D565;
   width: 25px;
   height: 25px;
 }
-.testimonals .container .row .col-lg-2 .navigator-button:hover {
+.testimonals .container .row .col-lg-2 button:hover {
   background: #08D565;
 }
-.testimonals .container .row .col-lg-2 .navigator-button:hover svg {
+.testimonals .container .row .col-lg-2 button:hover svg {
   fill: #FFFFFF;
 }
-.testimonals .container .row .col-lg-2 .navigator-button:nth-child(2) {
+.testimonals .container .row .col-lg-2 button:nth-child(2) {
   margin-left: 15px;
 }
 .testimonals .container .row .col-lg-12 {

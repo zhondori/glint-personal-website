@@ -97,3 +97,26 @@
   position: relative;
   z-index: 2;
 }
+
+@mixin NavigatorButton {
+  width: 50px;
+  height: 50px;
+  border: 1px solid $green;
+  border-radius: 5px;
+  background: transparent;
+  transition: 0.2s ease all;
+  svg {
+    fill: $green;
+    width: 25px;
+    height: 25px;
+  }
+  &:hover {
+    background: $green;
+    svg {
+      fill: $white;
+    }
+  }
+  &:nth-child(2) {
+    margin-left: 15px;
+  }
+}
