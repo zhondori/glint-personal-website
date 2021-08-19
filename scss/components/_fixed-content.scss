@@ -1,0 +1,77 @@
+.fixed-content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  font-family: "Rubik", sans-serif;
+  top: 0;
+  right: -150%;
+  transition: .5s linear all;
+  .main-content {
+    width: 400px;
+    height: 100%;
+    background: $black;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 30px;
+    button {
+      display: block;
+      position: absolute;
+      right: 15px;
+      top: 30px;
+      border: 1px solid $white;
+      fill: $white;
+      width: 50px;
+      height: 50px;
+      @include flexbox;
+      border-radius: 5px;
+      background: transparent;
+      font-size: 20px;
+      transition: 0.3s ease-out all;
+      &:hover {
+        background: $green;
+        border-color: $green;
+      }
+    }
+    img {
+      margin: 70px 0 20px 0;
+      cursor: pointer;
+    }
+    p {
+      font-weight: 400;
+      font-size: 17px;
+      color: $white;
+      cursor: pointer;
+      margin-bottom: 30px;
+      line-height: 29px;
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        li {
+            width: 45px;
+            height: 45px;
+            border: 1px solid $white;
+            border-radius: 5px;
+            @include flexbox;
+            list-style: none;
+            transition: .3s linear all;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+            a {
+                color: $white;
+                font-size: 18px;
+            }
+            &:hover {
+                background: $green;
+                border-color: $green;
+            }
+        }
+    }
+  }
+}

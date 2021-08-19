@@ -1,0 +1,99 @@
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// Header anime
+@mixin anime {
+  animation: SampleAnime 0.7s linear;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+}
+
+@mixin buttonStyled($width) {
+  width: $width;
+  height: 55px;
+  background: $green;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  border-radius: 5px;
+  color: $white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid $green;
+  transition: 0.3s ease all;
+  user-select: none;
+  cursor: pointer;
+  i {
+    padding: 7px 10px;
+    background: $white;
+    color: $green;
+    border-radius: 5px;
+  }
+  &:hover {
+    background: transparent;
+    color: $green;
+  }
+}
+
+/* Description Mixin */
+@mixin Description {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-family: $rubik;
+  position: relative;
+  margin-bottom: 30px;
+  border-left: 4px solid $green;
+  color: $white;
+  h3 {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+@mixin Title {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: $oswald;
+  line-height: 55px;
+  color: $white;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  span {
+    color: $green;
+  }
+}
+
+@mixin filled {
+  -webkit-text-stroke: 1px $stroke;
+  -webkit-text-fill-color: #0000;
+  text-transform: uppercase;
+  font-size: 80px;
+  position: absolute;
+  z-index: 1;
+  top: -55px;
+  font-weight: bold;
+  font-family: $oswald;
+  left: 10px;
+}
+
+@mixin subTitle {
+  color: $green;
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}

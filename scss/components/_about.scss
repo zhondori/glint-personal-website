@@ -1,0 +1,87 @@
+.about-section {
+  height: 750px;
+  background-color: $darken;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-6 {
+        position: relative;
+        .video__content {
+          width: 450px;
+          height: 540px;
+          background: url("../../images/about-video1.png") center center
+            no-repeat;
+          background-size: cover;
+          @include flexbox;
+          position: relative;
+          svg {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: $green;
+            fill: $white;
+            @include flexbox;
+            padding-left: 7px;
+            position: relative;
+            z-index: 2;
+            cursor: pointer;
+          }
+          .circle {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background: $green;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            animation: circleAnime 1.2s linear;
+            animation-iteration-count: infinite;
+          }
+          &::before {
+            content: "";
+            background: url("../../images/about-bg-shape.png") center center
+              no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            z-index: -1;
+            top: -90px;
+          }
+          &::after {
+            content: "";
+            background: url("../../images/about-shape.svg") center center
+              no-repeat;
+            background-size: contain;
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            z-index: -1;
+            top: 335px;
+            left: -75px;
+          }
+        }
+        .about_title {
+        @include Title;
+        }
+        .filled {
+          @include filled;
+        }
+        .about_paragraph {
+          color: $white;
+          font-size: 18px;
+          font-family: $rubik;
+          margin-bottom: 45px;
+        }
+        .btn_dowload {
+          @include buttonStyled(200px);
+        }
+      }
+    }
+  }
+}

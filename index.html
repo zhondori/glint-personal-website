@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glint</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- To Top Button -->
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+    <!-- Fixed Content -->
+    <div class="fixed-content">
+      <div class="main-content">
+        <button id="times">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="#ffffff"
+          >
+            <path
+              d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+            ></path>
+          </svg>
+        </button>
+        <img src="images/logo.png" alt="logo-fixed-content" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ratione
+          reprehenderit, error qui enim sit ex provident iure, dolor, nulla
+          eaque delectus, repudiandae commodi. Velit assumenda odit quisquam at,
+          error suscipit unde, necessitatibus ipsum ratione excepturi ducimus
+          labore, totam dolorem.
+        </p>
+        <ul class="social_links">
+          <li class="social_links__item">
+            <a href="https://facebook.com/" target="_blank"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li class="social_links__item">
+            <a href="https://twitter.com/" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li class="social_links__item">
+            <a href="https://linkedin.com/" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li class="social_links__item">
+            <a href="https://instagram.com/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- About Video -->
+    <div class="about_video">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="close_button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="close_svg"
+              >
+                <path
+                  d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+                ></path>
+              </svg>
+            </div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/i-vDuUa5XPg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <header class="header">
+      <!-- Navbar -->
+      <nav>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <img src="images/logo.png" alt="logo" />
+            </div>
+            <div class="col-lg-6">
+              <ul class="nav_list">
+                <li class="nav_list__item active_link has-child home">
+                  <a href="#">Home</a>
+                  <ul class="child_list" style="display: none">
+                    <li class="child_list__item">
+                      <a href="#"><i class="fas fa-ellipsis-h"></i> Home 1</a>
+                    </li>
+                    <li class="child_list__item">
+                      <a href="#"><i class="fas fa-ellipsis-h"></i> Home 2</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav_list__item about">
+                  <a href="#about">About</a>
+                </li>
+                <li class="nav_list__item service">
+                  <a href="#services">service</a>
+                </li>
+                <li class="nav_list__item portfolio">
+                  <a href="#portfolio">portfolio</a>
+                </li>
+                <li class="nav_list__item has-child pages">
+                  <a href="#">pages</a>
+                  <ul class="child_list" style="display: none">
+                    <li class="child_list__item">
+                      <a href="#"><i class="fas fa-ellipsis-h"></i> About</a>
+                    </li>
+                    <li class="child_list__item">
+                      <a href="#"
+                        ><i class="fas fa-ellipsis-h"></i> Portfolio</a
+                      >
+                    </li>
+                    <li class="child_list__item">
+                      <a href="#"
+                        ><i class="fas fa-ellipsis-h"></i> portfolio Details</a
+                      >
+                    </li>
+                    <li class="child_list__item">
+                      <a href="#"><i class="fas fa-ellipsis-h"></i> Blog</a>
+                    </li>
+                    <li class="child_list__item">
+                      <a href="#"
+                        ><i class="fas fa-ellipsis-h"></i> Single Blog</a
+                      >
+                    </li>
+                    <li class="child_list__item">
+                      <a href="#"
+                        ><i class="fas fa-ellipsis-h"></i> Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <label for="search">
+                <i class="fas fa-search"></i>
+              </label>
+              <input
+                type="search"
+                placeholder="Search"
+                class="search"
+                id="search"
+              />
+            </div>
+            <div class="col-lg-1">
+              <img src="images/hamburger.svg" alt="hamburger" id="hamburger" />
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Main Header -->
+      <main class="main-header text-white sect" id="home">
+        <div class="swiper-container main-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <h1>
+                      <span>Imagination</span> is more important than knowledge
+                    </h1>
+                    <div class="desc">
+                      <h3>
+                        Together we the people achieve more than nay single
+                        person cloud ever do alone.
+                      </h3>
+                    </div>
+                    <a href="#" class="start_btn"
+                      >Getting started <i class="fas fa-chevron-right"></i
+                    ></a>
+                  </div>
+                  <div class="col-lg-5">
+                    <img src="images/author1.png" alt="Author 1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <h1>
+                      <span>Imagination</span> is more important than knowledge
+                    </h1>
+                    <div class="desc">
+                      <h3>
+                        Together we the people achieve more than nay single
+                        person cloud ever do alone.
+                      </h3>
+                    </div>
+                    <a href="#" class="start_btn"
+                      >Getting started <i class="fas fa-chevron-right"></i
+                    ></a>
+                  </div>
+                  <div class="col-lg-5">
+                    <img src="images/author2.png" alt="Author 1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </main>
+    </header>
+    <!-- About Section -->
+    <section class="about-section sect" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="video__content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7 6v12l10-6z"></path>
+              </svg>
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="title_about">
+              <b class="filled">about us</b>
+              <h2 class="sect-title">
+                failure is the condiment that gives <span>success</span>
+              </h2>
+            </div>
+            <p class="about_paragraph">
+              Spend more time focusing on the important aspects of your
+              business. Turn to McCartney HR LLC in Brooklyn, NY for HR
+              solutions. As an advanced virtual HR company, we are offering
+              online HR systems that can be customized depending on your
+              business needs.
+            </p>
+            <a class="btn_dowload" href="#home">
+              download cv <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio -->
+    <section class="skills sect" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <b class="filled">my career</b>
+            <span class="sect-subtitle little"> my experience </span>
+            <h2 class="sect-title">experience and <span>skill</span></h2>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio_desc">
+              <h3>
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
+                Ratione Reprehenderit, Error Qui Enim Sit Ex Provident
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="skill_works">
+                  <span class="date">2011-2014 (ui designer)</span>
+                  <h2 class="comp">google corporation</h2>
+                  <p class="skill_text">
+                    All You Need To Do Your Best Work Together In One Package
+                    Works Seamlessly Computer
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill_works">
+                  <span class="date">2011-2014 (ui designer)</span>
+                  <h2 class="comp">app product co.</h2>
+                  <p class="skill_text">
+                    All You Need To Do Your Best Work Together In One Package
+                    Works Seamlessly Computer
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill_works">
+                  <span class="date">2011-2014 (ui designer)</span>
+                  <h2 class="comp">lead designer musicsoft</h2>
+                  <p class="skill_text">
+                    All You Need To Do Your Best Work Together In One Package
+                    Works Seamlessly Computer
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill_works">
+                  <span class="date">2011-2014 (ui designer)</span>
+                  <h2 class="comp">lbruno mars as.</h2>
+                  <p class="skill_text">
+                    All You Need To Do Your Best Work Together In One Package
+                    Works Seamlessly Computer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12 skill_bar">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="skill_box">
+                  <div class="per">
+                    <svg>
+                      <circle cy="70" cx="70" r="65"></circle>
+                      <circle cy="70" cx="70" r="65"></circle>
+                    </svg>
+                    <h2 class="percent">60<span>%</span></h2>
+                  </div>
+                  <h1 class="skill_type">Branding design</h1>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill_box">
+                  <div class="per">
+                    <svg>
+                      <circle cy="70" cx="70" r="65"></circle>
+                      <circle cy="70" cx="70" r="65"></circle>
+                    </svg>
+                    <h2 class="percent">70<span>%</span></h2>
+                  </div>
+                  <h1 class="skill_type">ui & ux design</h1>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill_box">
+                  <div class="per">
+                    <svg>
+                      <circle cy="70" cx="70" r="65"></circle>
+                      <circle cy="70" cx="70" r="65"></circle>
+                    </svg>
+                    <h2 class="percent">30<span>%</span></h2>
+                  </div>
+                  <h1 class="skill_type">web design</h1>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="skill_box">
+                  <div class="per">
+                    <svg>
+                      <circle cy="70" cx="70" r="65"></circle>
+                      <circle cy="70" cx="70" r="65"></circle>
+                    </svg>
+                    <h2 class="percent">90<span>%</span></h2>
+                  </div>
+                  <h1 class="skill_type">illustration</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Service -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <b class="filled">our services</b>
+            <div class="sect-subtitle">what we do</div>
+            <h2 class="sect-title">service and <span>solutions</span></h2>
+          </div>
+          <div class="col-lg-6">
+            <div class="service_desc">
+              <h3>
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
+                Ratione Reprehenderit, Error Qui Enim Sit Ex Provident
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="service_col">
+                  <img
+                    src="images/service1.svg"
+                    alt="service image 1"
+                    class="service_col__image"
+                  />
+                  <h3 class="service_col__title">design principales</h3>
+                  <p class="service_col__paragraph">
+                    Need A Project Completed By An Expert? Let’s Go! Access A
+                    Human Resources Consultant To Answer Questions
+                  </p>
+
+                  <p></p>
+                  <div class="service_col__circle">
+                    <div class="children">
+                      <div class="child">
+                        <div class="baby"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="service_col">
+                  <img
+                    src="images/service2.svg"
+                    alt="service image 2"
+                    class="service_col__image"
+                  />
+                  <h3 class="service_col__title">unique values</h3>
+                  <p class="service_col__paragraph">
+                    Need A Project Completed By An Expert? Let’s Go! Access A
+                    Human Resources Consultant To Answer Questions
+                  </p>
+
+                  <p></p>
+                  <div class="service_col__circle">
+                    <div class="children">
+                      <div class="child">
+                        <div class="baby"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="service_col">
+                  <img
+                    src="images/service3.svg"
+                    alt="service image 3"
+                    class="service_col__image"
+                  />
+                  <h3 class="service_col__title">style components</h3>
+                  <p class="service_col__paragraph">
+                    Need A Project Completed By An Expert? Let’s Go! Access A
+                    Human Resources Consultant To Answer Questions
+                  </p>
+
+                  <p></p>
+                  <div class="service_col__circle">
+                    <div class="children">
+                      <div class="child">
+                        <div class="baby"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Project -->
+    <section class="projects">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <b class="filled"> our projects </b>
+            <small class="sect-subtitle">working process</small>
+            <h2 class="sect-title">lastet working <span>project</span></h2>
+          </div>
+          <div class="col-lg-5">
+            <div class="projects_desc description">
+              <h3>
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
+                Ratione Reprehenderit
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"
+                ></path>
+              </svg>
+            </button>
+            <button class="next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="col-lg-12">
+            <div class="swiper-container project_slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-12 project_slider__col">
+                      <a href="#">
+                        <img src="images/project1.png" alt="project img" />
+                        <div class="hover_content">
+                          <h3>menu by alisher usmonov</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-12 project_slider__col">
+                      <a href="#">
+                        <img src="images/project2.png" alt="project img" />
+                        <div class="hover_content">
+                          <h3>menu by alisher usmonov</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-12 project_slider__col">
+                      <a href="#">
+                        <img src="images/project3.png" alt="project img" />
+                        <div class="hover_content">
+                          <h3>menu by alisher usmonov</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-12 project_slider__col">
+                      <a href="#">
+                        <img src="images/project4.png" alt="project img" />
+                        <div class="hover_content">
+                          <h3>menu by alisher usmonov</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-12 project_slider__col">
+                      <a href="#">
+                        <img src="images/project1.png" alt="project img" />
+                        <div class="hover_content">
+                          <h3>menu by alisher usmonov</h3>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonals -->
+    <section class="testimonals">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <small class="filled">testimonals</small>
+            <h4 class="sect-subtitle">testimonals</h4>
+            <h3 class="sect-title">happy clients to <span>says</span></h3>
+          </div>
+          <div class="col-lg-5">
+            <div class="description">
+              <h3>
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
+                Ratione Reprehenderit
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <button class="navigator-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"
+                ></path>
+              </svg>
+            </button>
+            <button class="navigator-button">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="col-lg-12">
+            <div class="swiper-container testimonals-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="row">
+                    <div class="col-lg-2">
+                      <img
+                        src="images/testimonial1.jpg"
+                        alt="testimonal image"
+                      />
+                    </div>
+                    <div class="col-lg-10">
+                      <img src="images/quote.png" alt="quote" />
+                      <p class="testimonal_text">
+                        gilroy is a great and super-professional service
+                        provider, which brought new technoligies, new
+                        methodology, and a fresh prespective to our project
+                      </p>
+                      <h3 class="testimonal_author">
+                        jack metiyo shina, <span>nyc, usa</span>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Payment -->
+    <section class="payment">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="filled">payment</p>
+            <h4 class="sect-subtitle">specifications</h4>
+            <h3 class="sect-title">all your payment <span>options</span></h3>
+          </div>
+          <div class="col-lg-6">
+            <div class="description">
+              <h3>
+                Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit. Sint
+                Ratione Reprehenderit
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="payment_card">
+              <img src="images/service1.svg" alt="payment image" />
+              <div class="payment_for">
+                <h3 class="payment_for__type">incfluencer</h3>
+                <p class="payment_for__comment">best for small investors</p>
+              </div>
+              <div class="payment_line"></div>
+              <div class="payment_price">
+                <h2 class="payment_price__sum">$104</h2>
+                <p class="payment_price__for">per month</p>
+              </div>
+              <a href="#" class="read_more">read more <i class="fas fa-chevron-right"></i></a>
+              <div class="payment_circle">
+                <div class="circle_children">
+                  <div class="circle_child">
+                    <div class="circle_baby"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment_card">
+              <img src="images/service2.svg" alt="payment image" />
+              <div class="payment_for">
+                <h3 class="payment_for__type">agency</h3>
+                <p class="payment_for__comment">best for small investors</p>
+              </div>
+              <div class="payment_line"></div>
+              <div class="payment_price">
+                <h2 class="payment_price__sum">$204</h2>
+                <p class="payment_price__for">per month</p>
+              </div>
+              <a href="#" class="read_more">read more <i class="fas fa-chevron-right"></i></a>
+              <div class="payment_circle">
+                <div class="circle_children">
+                  <div class="circle_child">
+                    <div class="circle_baby"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="payment_card">
+              <img src="images/service3.svg" alt="payment image" />
+              <div class="payment_for">
+                <h3 class="payment_for__type">enterprice</h3>
+                <p class="payment_for__comment">best for small investors</p>
+              </div>
+              <div class="payment_line"></div>
+              <div class="payment_price">
+                <h2 class="payment_price__sum">let's chart</h2>
+                <p class="payment_price__for">per month</p>
+              </div>
+              <a href="#" class="read_more">read more <i class="fas fa-chevron-right"></i></a>
+              <div class="payment_circle">
+                <div class="circle_children">
+                  <div class="circle_child">
+                    <div class="circle_baby"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascript/script.js" type="text/javascript"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      /* Main Header Slider Initialize */
+      var swiper = new Swiper(".main-slider", {
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' + className + '">0' + (index + 1) + "</span>"
+            );
+          },
+        },
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+      /* Projects Slider Initialize */
+      var swiper = new Swiper(".project_slider", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        loop: true,
+        loopFillGroupWithBlank: true,
+      });
+
+      /* Main Header Slider Initialize */
+      var swiper = new Swiper(".testimonals-slider", {
+        loop: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>

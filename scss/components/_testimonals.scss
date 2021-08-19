@@ -1,0 +1,96 @@
+.testimonals {
+  height: 650px;
+  width: 100%;
+  background: url("../../images/testimonials-bg.png") center center no-repeat;
+  background-size: cover;
+  padding: 20px 0 40px 0;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-5 {
+        position: relative;
+      }
+      .col-lg-2 {
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        .navigator-button {
+          width: 50px;
+          height: 50px;
+          border: 1px solid $green;
+          border-radius: 5px;
+          background: transparent;
+          transition: 0.2s ease all;
+          svg {
+            fill: $green;
+            width: 25px;
+            height: 25px;
+          }
+          &:hover {
+            background: $green;
+            svg {
+              fill: $white;
+            }
+          }
+          &:nth-child(2) {
+            margin-left: 15px;
+          }
+        }
+      }
+      .col-lg-12 {
+        height: 300px;
+        .swiper-container {
+          height: 100%;
+          .swiper-wrapper {
+            height: 100%;
+            .swiper-slide {
+              width: 100%;
+              height: 100%;
+              .row {
+                height: 100%;
+                .col-lg-2 {
+                  height: 100%;
+                  @include flexbox;
+                  img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                  }
+                }
+                .col-lg-10 {
+                  img {
+                    margin-bottom: 20px;
+                  }
+                  .testimonal_text {
+                    font-size: 26px;
+                    width: 86%;
+                    color: $white;
+                    text-transform: uppercase;
+                    font-family: $oswald;
+                    font-weight: 500;
+                  }
+                  .testimonal_author {
+                    text-transform: capitalize;
+                    color: $white;
+                    font-size: 20px;
+                    font-family: $rubik;
+                    font-weight: 400;
+                    span {
+                      text-transform: uppercase;
+                    }
+                  }
+                }
+              }
+              &:active {
+                cursor: grabbing;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

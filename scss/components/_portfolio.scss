@@ -1,0 +1,141 @@
+.skills {
+  height: 960px;
+  background: $darken;
+  padding: 100px 0;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-6 {
+        position: relative;
+        .portfolio_desc {
+          @include Description;
+        }
+      }
+      .col-lg-12 {
+        height: 200px;
+        .row {
+          height: 100%;
+          .col-lg-3 {
+            height: 100%;
+            .skill_works {
+              padding: 20px 15px;
+              background: transparent;
+              box-shadow: 0 60px 65px #00000063;
+              height: 100%;
+              transition: 0.25s linear all;
+              transform: translateY(0px);
+              color: $white;
+              font-family: $rubik;
+              &:hover {
+                transition: 0.25s linear all;
+                transform: translateY(-10px);
+                background: #131617;
+              }
+              .date {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 500;
+                display: block;
+                margin-bottom: 16px;
+              }
+              .comp {
+                text-transform: uppercase;
+                color: $green;
+                font-size: 20px;
+                font-family: $oswald;
+                margin-bottom: 18px;
+              }
+            }
+            .skill_box {
+              width: 250px;
+              height: 300px;
+              @include flexbox;
+              flex-direction: column;
+              font-family: $oswald;
+              color: $white;
+              .per {
+                width: 148px;
+                height: 148px;
+                position: relative;
+                margin-bottom: 16px;
+                svg {
+                  width: 148px;
+                  height: 148px;
+                  circle {
+                    width: 148px;
+                    height: 148px;
+                    fill: none;
+                    stroke-width: 10;
+                    stroke: #000;
+                    transform: translate(5px, 5px);
+                    stroke-dasharray: 408;
+                    stroke-dashoffset: 408;
+                    &:nth-child(1) {
+                      stroke-dashoffset: 0;
+                      stroke: $white;
+                    }
+                    &:nth-child(2) {
+                      stroke-dashoffset: calc(408 - (408 * 60) / 100);
+                      stroke: $green;
+                    }
+                  }
+                }
+                .percent {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  font-size: 45px;
+                  font-weight: 600;
+                  margin-bottom: 0;
+                  span {
+                    font-size: 25px;
+                  }
+                }
+              }
+              .skill_type {
+                text-transform: uppercase;
+                font-size: 22px;
+              }
+            }
+            &:nth-child(2) {
+              .per {
+                svg {
+                  circle {
+                    &:nth-child(2) {
+                      stroke-dashoffset: calc(408 - (408 * 70) / 100);
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(3) {
+              .per {
+                svg {
+                  circle {
+                    &:nth-child(2) {
+                      stroke-dashoffset: calc(408 - (408 * 30) / 100);
+                    }
+                  }
+                }
+              }
+            }
+            &:nth-child(4) {
+              .per {
+                svg {
+                  circle {
+                    &:nth-child(2) {
+                      stroke-dashoffset: calc(408 - (408 * 90) / 100);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

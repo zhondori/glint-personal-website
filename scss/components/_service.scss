@@ -1,0 +1,131 @@
+.services {
+  height: 800px;
+  background-color: $darken;
+  padding: 50px 0;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-6 {
+        position: relative;
+        .service_desc {
+          @include Description;
+        }
+      }
+      .col-lg-12 {
+        height: 380px;
+        .row {
+          .col-lg-4 {
+            height: 100%;
+            .service_col {
+              position: relative;
+              height: 100%;
+              background: #131617;
+              @include flexbox;
+              flex-direction: column;
+              width: 98%;
+              margin: 0 auto;
+              overflow: hidden;
+              transition: 0.15s ease all;
+              &__image {
+                width: 85px;
+                margin-bottom: 30px;
+                position: relative;
+                z-index: 3;
+              }
+              &__title {
+                color: $green;
+                font-family: $oswald;
+                text-transform: uppercase;
+                font-size: 24px;
+                margin-bottom: 35px;
+                position: relative;
+                z-index: 3;
+              }
+              &__paragraph {
+                color: #999999;
+                width: 80%;
+                margin: 0 auto;
+                font-size: 18px;
+                text-align: center;
+                font-family: $rubik;
+                position: relative;
+                z-index: 3;
+              }
+              &__circle {
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                position: absolute;
+                right: -180px;
+                bottom: -130px;
+                background: #22cd6f;
+                overflow: hidden;
+                transition: 0.35s ease all;
+                .children {
+                  width: 320px;
+                  height: 320px;
+                  background: #39d27e;
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  .child {
+                    width: 220px;
+                    height: 220px;
+                    background: #4dd78b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    .baby {
+                      width: 120px;
+                      height: 120px;
+                      background: #5fdb97;
+                      border-radius: 50%;
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                    }
+                  }
+                }
+              }
+              &:hover {
+                background-color: #09c75f;
+                .service_col__title {
+                  color: $white;
+                }
+                .service_col__paragraph {
+                  color: $white;
+                }
+                .service_col__circle {
+                  width: 420px;
+                  height: 420px;
+                }
+              }
+            }
+            &:nth-child(2) {
+              .service_col {
+                background: #09c75f;
+                &__title {
+                  color: $white;
+                }
+                &__paragraph {
+                  color: $white;
+                }
+                &__circle {
+                  width: 420px;
+                  height: 420px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

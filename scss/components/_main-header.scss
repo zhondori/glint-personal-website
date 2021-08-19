@@ -1,0 +1,119 @@
+.main-header {
+  width: 100%;
+  height: 100vh;
+  padding-top: 20px;
+  background: transparent;
+  overflow: visible;
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .swiper-wrapper {
+      height: 100%;
+      .swiper-slide {
+        height: 100%;
+        .container {
+          .row {
+            .col-lg-7 {
+              &:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              }
+              h1 {
+                margin-bottom: 25px;
+                text-transform: uppercase;
+                line-height: 70px;
+                font-weight: 700;
+                font-size: 50px;
+                font-family: $oswald;
+                width: 100%;
+                span {
+                  color: $green;
+                }
+              }
+              .desc {
+                @include Description;
+              }
+              .start_btn {
+                @include buttonStyled(220px);
+              }
+            }
+            .col-lg-5 {
+              position: relative;
+              img {
+                width: 100%;
+              }
+              &::before {
+                font-family: "Oswald", sans-serif;
+                content: "Gilroy";
+                color: #f00;
+                -webkit-text-stroke: 1px #141618;
+                -webkit-text-fill-color: #0000;
+                position: absolute;
+                top: 10%;
+                left: -7%;
+                z-index: -1;
+                font-size: 200px;
+                font-weight: 700;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+        // Animated
+        &-active {
+          .container {
+            .row {
+              .col-lg-7 {
+                h1 {
+                  @include anime();
+                }
+                .desc {
+                  @include anime();
+                }
+                .start_btn {
+                  @include anime();
+                }
+              }
+              .col-lg-5 {
+                position: relative;
+                img {
+                  width: 100%;
+                }
+                &::before {
+                  @include anime();
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      position: absolute;
+      top: 50% !important;
+      left: 94% !important;
+      display: flex;
+      flex-direction: column !important;
+      gap: 5px;
+      .swiper-pagination-bullet {
+        width: 26px;
+        height: 26px;
+        @include flexbox;
+        font-size: 15px;
+        border: 1px solid $green;
+        color: $green;
+        opacity: 1;
+        background: transparent;
+        margin: 0;
+        font-weight: 500;
+      }
+      .swiper-pagination-bullet-active {
+        background: $green;
+        color: $white;
+      }
+    }
+  }
+}

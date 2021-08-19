@@ -1,0 +1,128 @@
+nav {
+  height: 90px;
+  border-bottom: 1px solid #15181a;
+  font-family: $rubik;
+  background-color: transparent;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  &.sticky {
+    background-color: $black;
+  }
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-6 {
+        height: 100%;
+        .nav_list {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 30px;
+          margin: 0;
+          list-style: none;
+          &__item {
+            line-height: 90px;
+            padding: 0 20px;
+            position: relative;
+            &.active_link::before {
+              width: 100%;
+            }
+            a {
+              text-decoration: none;
+              color: #c8c6c6;
+              text-transform: uppercase;
+              font-size: 14px;
+            }
+            .child_list {
+              position: absolute;
+              top: 100%;
+              background: #2e3d44;
+              left: 0;
+              min-width: 200px;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              overflow-x: hidden;
+              &__item {
+                padding-left: 10px;
+                line-height: 40px;
+                display: flex;
+                &:first-child {
+                  padding-top: 8px;
+                }
+                &:last-child {
+                  padding-bottom: 8px;
+                }
+                a {
+                  transform: translateX(-10px);
+                  transition: 0.3s linear all;
+                  i {
+                    transform: translateX(-10px);
+                    transition: 0.3s linear all;
+                    opacity: 0;
+                    margin-right: 5px;
+                  }
+                  &:hover {
+                    color: $green;
+                    transform: translateX(0);
+                    i {
+                      transform: translateX(0);
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              height: 1px;
+              background: $green;
+              width: 0;
+              bottom: 0;
+              left: 0;
+              transition: 0.4s ease-out all;
+            }
+            &:hover::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .col-lg-2 {
+        @include flexbox;
+        label {
+          i {
+            margin-right: 5px;
+            font-size: 20px;
+            color: $green;
+          }
+        }
+        input {
+          background: transparent;
+          width: 150px;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          color: $white;
+          &:focus::placeholder {
+            color: #ffffff2c;
+          }
+        }
+      }
+      .col-lg-1 {
+        @include flexbox;
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

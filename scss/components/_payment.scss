@@ -1,0 +1,176 @@
+.payment {
+  height: 800px;
+  background: url("../../images/about-bg.png") center center no-repeat $darken;
+  background-size: cover;
+  padding: 30px 0;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-6 {
+        position: relative;
+      }
+      .col-lg-12 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 480px;
+        column-gap: 30px;
+        .payment_card {
+          background: #131617;
+          @include flexbox;
+          flex-direction: column;
+          position: relative;
+          overflow: hidden;
+          transition: .3s ease all;
+          img {
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+          }
+          .payment_for {
+            margin-bottom: 10px;
+            font-family: $oswald;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            &__type {
+              text-transform: uppercase;
+              font-size: 34px;
+              font-weight: 700;
+              color: $green;
+              margin-bottom: 10px;
+            }
+            &__comment {
+              text-transform: capitalize;
+              color: #999999;
+              font-size: 18px;
+            }
+          }
+          .payment_line {
+            width: 75%;
+            margin: 0 auto;
+            height: 1px;
+            background: #999999;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+          }
+          .payment_price {
+            margin-bottom: 10px;
+            text-align: center;
+            font-family: $oswald;
+            position: relative;
+            z-index: 2;
+            &__sum {
+              text-transform: uppercase;
+              color: $green;
+              font-size: 36px;
+            }
+            &__for {
+              @extend .payment_for__comment;
+            }
+          }
+          .read_more {
+            @include buttonStyled(175px);
+            position: relative;
+            z-index: 2;
+            &:hover {
+              background: $green;
+              color: $white;
+            }
+          }
+          .payment_circle {
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            bottom: -37%;
+            transform: translateX(-50%);
+            background: #22cd6f;
+            overflow: hidden;
+            transition: 0.35s ease all;
+            z-index: 1;
+            .circle_children {
+              width: 320px;
+              height: 320px;
+              background: #39d27e;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              .circle_child {
+                width: 220px;
+                height: 220px;
+                background: #4dd78b;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .circle_baby {
+                  width: 120px;
+                  height: 120px;
+                  background: #5fdb97;
+                  border-radius: 50%;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+          }
+          &:nth-child(2) {
+            background: #09c75f;
+            .payment_for {
+              &__type {
+                color: $white;
+              }
+              &__comment {
+                color: $white;
+              }
+            }
+            .payment_line {
+              background: $white;
+            }
+            .payment_price {
+              &__sum {
+                color: $white;
+              }
+            }
+            .payment_circle {
+              width: 420px;
+              height: 420px;
+            }
+          }
+          &:hover {
+            background: #09c75f;
+            .payment_for {
+              &__type {
+                color: $white;
+              }
+              &__comment {
+                color: $white;
+              }
+            }
+            .payment_line {
+              background: $white;
+            }
+            .payment_price {
+              &__sum {
+                color: $white;
+              }
+            }
+            .payment_circle {
+              width: 420px;
+              height: 420px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

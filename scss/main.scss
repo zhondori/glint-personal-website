@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./animations/animation";
+body {
+  overflow-x: hidden;
+}
+.to-top {
+  position: fixed;
+  bottom: -100px;
+  right: 125px;
+  width: 59px;
+  height: 60px;
+  @include flexbox;
+  background-color: $green;
+  border: 1px solid $white;
+  border-radius: 5px;
+  color: $white;
+  transition: .7s ease all;
+  font-size: 20px;
+  text-decoration: none;
+  z-index: 99;
+  opacity: 0;
+  &:hover {
+    border-color: $green;
+    background-color: $white;
+    color: $green;
+  }
+  &.to-fixed {
+    bottom: 40px;
+    opacity: 1;
+  }
+}
+.filled {
+  @include filled;
+}
+.sect-title {
+  @include Title;
+}
+.sect-subtitle {
+  @include subTitle;
+}
+.description {
+  @include Description;
+}
+@import "./components/fixed-content";
+header.header {
+  background: url("../images/bg1.jpg") center center no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+@import "./components/navbar";
+@import "./components/main-header";
+@import "./components/about";
+@import "./components/about-video";
+@import "./components/portfolio";
+@import "./components/service";
+@import "./components/project";
+@import "./components/testimonals";
+@import "./components/payment";
