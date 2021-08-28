@@ -1,0 +1,59 @@
+footer {
+  height: 500px;
+  background: url("../../images/footer-bg.png") center center no-repeat $darken;
+  background-size: cover;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      align-items: center;
+      .col-lg-12 {
+        text-align: center;
+        overflow: hidden;
+        .social_links {
+          margin: 140px 0 50px 0;
+          @include flexbox;
+          list-style: none;
+          li {
+            &:not(:last-child) {
+              margin-right: 15px;
+            }
+            a {
+              text-decoration: none;
+              text-transform: uppercase;
+              font-family: $rubik;
+              color: $white;
+              font-weight: 600;
+              transition: 0.2s ease all;
+              &:hover {
+                color: $green;
+              }
+            }
+          }
+        }
+        .footer_text {
+          font-size: 12px;
+          text-transform: uppercase;
+          color: #474747;
+          a {
+            color: $green;
+            text-decoration: none;
+          }
+        }
+        .swiper-container {
+          .swiper-wrapper {
+            .swiper-slide {
+              img {
+                filter: grayscale(100%);
+                &:hover {
+                  filter: grayscale(0%);
+                  cursor: move;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.newsletter {
+  height: 400px;
+  background: url("../../images/map.png") center center no-repeat $darken;
+  background-size: cover;
+  width: 100%;
+  padding-top: 150px;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+      .col-lg-12 {
+        height: 100%;
+        @include flexbox;
+        flex-direction: column;
+        text-align: center;
+        .sect-title {
+          width: 45%;
+        }
+        .subscribe {
+          padding: 15px;
+          display: flex;
+          #email {
+            height: 60px;
+            width: 250px;
+            border: 1px solid $green;
+            border-radius: 5px;
+            background: #32383A;
+            padding: 0 15px;
+            outline: none;
+            caret-color: $white;
+            color: $white;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $rubik;
+          }
+          &_button {
+            display: block;
+            height: 60px;
+            width: 190px;
+            background: $green;
+            margin-left: 15px;
+            border-radius: 5px;
+            @include flexbox;
+            text-decoration: none;
+            color: $white;
+            text-transform: uppercase;
+            font-family: $rubik;
+            font-weight: 500;
+            border: 1px solid $green;
+            transition: .3s ease all;
+            i {
+              padding: 10px 9px;
+              background: $white;
+              margin-left: 15px;
+              color: $green;
+              border-radius: 2px;
+            }
+            &:hover {
+              background: transparent;
+              color: $green;
+              i {
+                color: $green;
+                background: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

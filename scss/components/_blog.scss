@@ -1,0 +1,90 @@
+.blog {
+  height: 700px;
+  width: 100%;
+  background: $darken;
+  padding-top: 70px;
+  .container {
+    .row {
+      .col-lg-5 {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .col-lg-2 {
+          margin-bottom: 30px;
+        button {
+          @include NavigatorButton;
+        }
+      }
+      .col-lg-12 {
+        &.blog_posts {
+          height: 470px;
+          overflow: hidden;
+          .swiper-container {
+            height: 100%;
+            .swiper-wrapper {
+              height: 100%;
+              .swiper-slide {
+                height: 100%;
+                img {
+                  height: 50%;
+                  width: 100%;
+                  background-size: cover;
+                }
+                .blog_text {
+                  background: $white;
+                  height: 50%;
+                  width: 100%;
+                  padding: 40px 30px;
+                  &__date {
+                    font-family: $rubik;
+                    font-size: 17px;
+                    margin-bottom: 20px;
+                    color: #131617;
+                  }
+                  &__title {
+                    color: #131616;
+                    text-transform: uppercase;
+                    font-family: $oswald;
+                    font-size: 24px;
+                    font-weight: 600;
+                    display: block;
+                    text-decoration: none;
+                    margin-bottom: 20px;
+                    transition: 0.3s ease all;
+                  }
+                  &__read-more {
+                    font-family: $rubik;
+                    color: $green;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 12px;
+                    i {
+                      transition: 0.2s ease all;
+                      margin-right: 5px;
+                    }
+                    &:hover {
+                      i {
+                        margin-right: 10px;
+                      }
+                    }
+                  }
+                }
+                &:hover {
+                  .blog_text {
+                    &__title {
+                      color: $green;
+                    }
+                  }
+                }
+              }
+            }
+            &:active {
+              cursor: grab;
+            }
+          }
+        }
+      }
+    }
+  }
+}

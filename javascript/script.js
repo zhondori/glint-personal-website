@@ -19,6 +19,11 @@ $(document).ready(() => {
   $("#times").click(() => {
     $(".fixed-content").css("right", "-150%");
   });
+
+  // Loader
+  $(".loader").css({
+    display: "none",
+  });
 });
 // Navbar Sticky
 let nav = document.querySelector("nav"),
@@ -32,7 +37,7 @@ function Scrolling() {
     nav.classList.remove("sticky");
   }
 
-  if (window.scrollY > 200) {
+  if (window.scrollY > 0) {
     toTop.classList.add("to-fixed");
   } else {
     toTop.classList.remove("to-fixed");
@@ -60,7 +65,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const videoContent = document.querySelector(".video__content"),
+const videoContent = document.querySelector(".video__content > svg"),
   aboutVideo = document.querySelector(".about_video"),
   overlay = document.querySelector(".overlay"),
   xButton = document.querySelector(".close_svg");
@@ -83,52 +88,93 @@ const slides = document.querySelectorAll(".project_slider__col"),
   maxOffsetY = 450;
 slides.forEach((slide, id) => {
   slide.addEventListener("mousemove", (evt) => {
-    if (evt.offsetY < maxOffsetY / 2 && evt.offsetX < maxOffsetX / 2 || evt.offsetY > maxOffsetY / 2) {
+    if (
+      (evt.offsetY < maxOffsetY / 2 && evt.offsetX < maxOffsetX / 2) ||
+      evt.offsetY > maxOffsetY / 2
+    ) {
       hoverContents[id].style.cssText = `
           top: 0%;
           left: 3%;
         `;
-    } 
-    else if (evt.offsetY < maxOffsetY / 2 && evt.offsetX > maxOffsetX / 2 || evt.offsetY > maxOffsetY / 2) {
+    } else if (
+      (evt.offsetY < maxOffsetY / 2 && evt.offsetX > maxOffsetX / 2) ||
+      evt.offsetY > maxOffsetY / 2
+    ) {
       hoverContents[id].style.cssText = `
         top: 0%;
         left: 3%;
       `;
-    } else if (evt.offsetX < maxOffsetX / 2 && evt.offsetY < maxOffsetY / 2 || evt.offsetX > maxOffsetX / 2) {
+    } else if (
+      (evt.offsetX < maxOffsetX / 2 && evt.offsetY < maxOffsetY / 2) ||
+      evt.offsetX > maxOffsetX / 2
+    ) {
       hoverContents[id].style.cssText = `
         top: 0;
         left: 3%;
       `;
-    } else if (evt.offsetX > maxOffsetX / 2 && evt.offsetY < maxOffsetY / 2 || evt.offsetX > maxOffsetX / 2) {
+    } else if (
+      (evt.offsetX > maxOffsetX / 2 && evt.offsetY < maxOffsetY / 2) ||
+      evt.offsetX > maxOffsetX / 2
+    ) {
       hoverContents[id].style.cssText = `
         top: 0;
         left: 3%;
       `;
     }
-  })
+  });
 
   // MouseLeave
   slide.addEventListener("mouseleave", (evt) => {
-    if (evt.offsetY < maxOffsetY / 2 && evt.offsetX < maxOffsetX / 2 || evt.offsetY > maxOffsetY / 2) {
+    if (
+      (evt.offsetY < maxOffsetY / 2 && evt.offsetX < maxOffsetX / 2) ||
+      evt.offsetY > maxOffsetY / 2
+    ) {
       hoverContents[id].style.cssText = `
         top: 0%;
         left: -100%;
       `;
-    } else if (evt.offsetY < maxOffsetY / 2 && evt.offsetX > maxOffsetX / 2 || evt.offsetY > maxOffsetY / 2) {
+    } else if (
+      (evt.offsetY < maxOffsetY / 2 && evt.offsetX > maxOffsetX / 2) ||
+      evt.offsetY > maxOffsetY / 2
+    ) {
       hoverContents[id].style.cssText = `
       top: 0%;
       left: 100%;
     `;
-    } else if (evt.offsetX < maxOffsetX / 2 && evt.offsetY < maxOffsetY / 2 || evt.offsetX > maxOffsetX / 2) {
+    } else if (
+      (evt.offsetX < maxOffsetX / 2 && evt.offsetY < maxOffsetY / 2) ||
+      evt.offsetX > maxOffsetX / 2
+    ) {
       hoverContents[id].style.cssText = `
       top: -100%;
       left: 3%;
     `;
-    } else if (evt.offsetX < maxOffsetX / 2 && evt.offsetY > maxOffsetY / 2 || evt.offsetX > maxOffsetX / 2) {
+    } else if (
+      (evt.offsetX < maxOffsetX / 2 && evt.offsetY > maxOffsetY / 2) ||
+      evt.offsetX > maxOffsetX / 2
+    ) {
       hoverContents[id].style.cssText = `
       top: 100%;
       left: 3%;
     `;
     }
-  })
+  });
+});
+
+const bar = document.querySelector(".bar"),
+  navCol = document.querySelector("nav > .container > .row > .col-lg-6"),
+  closeRef = document.querySelector(".close-refs");
+
+bar.addEventListener("click", () => {
+  navCol.style.cssText = `
+    opacity: 1;
+    display: block;
+  `;
+})
+
+closeRef.addEventListener("click", () => {
+  navCol.style.cssText = `
+    display: none;
+    opacity: 0;
+  `;
 })

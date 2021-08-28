@@ -37,3 +37,13 @@
         opacity: 0;
     }
 }
+
+// Loader Animation
+@keyframes loader {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

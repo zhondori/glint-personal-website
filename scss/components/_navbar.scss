@@ -16,8 +16,24 @@ nav {
     .row {
       height: 100%;
       align-items: center;
+      .col-lg-3 {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        svg {
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            display: none;
+        }
+    }
       .col-lg-6 {
         height: 100%;
+        .refs {
+          display: none;
+        }
         .nav_list {
           height: 100%;
           display: flex;

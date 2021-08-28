@@ -4,8 +4,39 @@
 @import "./helpers/mixins";
 @import "./animations/animation";
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
+  background: #0B0D0D;
 }
+/* Loader */
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: $black;
+  @include flexbox;
+  z-index: 1000;
+  .load {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+      border-radius: 50%;
+      content: '';
+      width: 68px; 
+      height: 68px;
+      position: absolute;
+      border: 6px solid;
+      border-color: $white transparent $white transparent;
+      transform-style: preserve-3d;
+      transform: rotateZ(0);
+      animation: loader 1.5s linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+/* To Top Button */
 .to-top {
   position: fixed;
   bottom: -100px;
@@ -59,3 +90,7 @@ header.header {
 @import "./components/project";
 @import "./components/testimonals";
 @import "./components/payment";
+@import "./components/blog";
+@import "./components/newsletter";
+@import "./components/footer";
+@import "./responsive";
