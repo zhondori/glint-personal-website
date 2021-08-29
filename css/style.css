@@ -1655,6 +1655,11 @@ footer .container .row .col-lg-12 .swiper-container .swiper-wrapper .swiper-slid
 }
 
 @media (max-width: 768px) {
+  /* To-Top Button */
+  .to-top {
+    right: 1.5rem;
+  }
+
   /* Navbar */
   nav .container .row .col-lg-3 {
     padding: 0 20px;
