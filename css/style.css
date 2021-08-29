@@ -2090,7 +2090,7 @@ footer .container .row .col-lg-12 .swiper-container .swiper-wrapper .swiper-slid
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0 0 80px;
+    margin: 15px;
   }
   .newsletter .container .row .col-lg-12 .subscribe #email {
     width: 300px;
