@@ -1659,6 +1659,9 @@ footer .container .row .col-lg-12 .swiper-container .swiper-wrapper .swiper-slid
   .to-top {
     right: 1.5rem;
   }
+  .to-top.to-fixed {
+    bottom: 1.5rem;
+  }
 
   /* Navbar */
   nav .container .row .col-lg-3 {
